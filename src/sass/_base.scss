@@ -1,0 +1,43 @@
+// COLORS
+$color-primary: #fe1111;
+$color-secondary: #f08937;
+
+$color-gray-light-1: #fff0f0;
+$color-gray-light-2: #f4e7e7;
+$color-gray-medium: #d5c1c1;
+$color-gray-dark-1: #614f4f;
+$color-gray-dark-2: #968484;
+
+$gradient: linear-gradient(to right bottom, $color-secondary, $color-primary);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-image: $gradient;
+  background-size: cover;
+}
+
+.container {
+  max-width: 120rem;
+  min-height: 120rem;
+  background-color: #fff;
+  margin: 4vw auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2rem 6rem 0.5rem rgba($color-gray-dark-1, 0.2);
+}
