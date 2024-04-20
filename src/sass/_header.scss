@@ -1,4 +1,5 @@
 .header {
+  grid-area: head;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,7 +9,6 @@
   &__logo {
     height: 8rem;
     display: block;
-    margin: 2em 0;
   }
 }
 
@@ -88,7 +88,7 @@
 
     span {
       position: relative;
-      top: 1px;
+      // top: 1px;
     }
 
     &:hover {
