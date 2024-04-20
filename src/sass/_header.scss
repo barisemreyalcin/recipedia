@@ -1,0 +1,98 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-gray-light-1;
+  padding: 0 2em;
+
+  &__logo {
+    height: 8rem;
+    display: block;
+    margin: 2em 0;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10rem;
+  transition: all 0.3s;
+
+  &:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 0.7rem 3rem rgba($color-gray-dark-1, 0.08);
+  }
+
+  &__field {
+    font-size: 1.6rem;
+    border: none;
+    padding-left: 2em;
+    width: 30rem;
+    font-family: inherit;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-gray-medium;
+    }
+  }
+
+  &__btn {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    font-weight: 500;
+
+    border-radius: 10rem;
+    background: $gradient;
+    color: #fff;
+  }
+}
+
+.nav {
+  align-self: stretch;
+  color: $color-gray-dark-1;
+
+  &__list {
+    display: flex;
+    height: 100%;
+    list-style: none;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: currentColor;
+    padding: 0 1em;
+    transition: all 0.3s;
+
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      fill: $color-primary;
+    }
+
+    span {
+      position: relative;
+      top: 1px;
+    }
+
+    &:hover {
+      background: $color-gray-light-2;
+    }
+  }
+}
