@@ -1,3 +1,12 @@
+.heading--2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $color-primary;
+  text-transform: uppercase;
+  margin-bottom: 1.75em;
+  text-align: center;
+}
+
 .btn {
   border: none;
   cursor: pointer;
@@ -15,5 +24,105 @@
     fill: currentColor;
     width: 2.5rem;
     height: 2.5rem;
+  }
+}
+
+.btn--small {
+  &,
+  &:link,
+  &:visited {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 1.25em 1.5em;
+    text-decoration: none;
+    border-radius: 10rem;
+    background: $gradient;
+    color: #fff;
+
+    svg {
+      height: 1.75rem;
+      width: 1.75rem;
+      fill: currentColor;
+    }
+  }
+}
+
+.btn--tiny {
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  svg {
+    height: 100%;
+    width: 100%;
+    fill: $color-primary;
+    transition: all 0.3s;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover svg {
+    transform: translateY(-1px);
+  }
+
+  &:active svg {
+    transform: translateY(0);
+  }
+}
+
+.btn--round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: $gradient;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  height: 4.5rem;
+  width: 4.5rem;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.07);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: #fff;
+  }
+}
+
+.spinner {
+  margin: 4em auto;
+  text-align: center;
+
+  svg {
+    height: 6rem;
+    width: 6rem;
+    fill: $color-primary;
+    animation: rotate 2s infinite linear;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
