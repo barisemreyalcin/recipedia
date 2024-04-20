@@ -30,6 +30,7 @@ body {
   font-family: "Open Sans", sans-serif;
   background-image: $gradient;
   background-size: cover;
+  color: $color-gray-dark-1;
 }
 
 .container {
@@ -40,4 +41,11 @@ body {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 2rem 6rem 0.5rem rgba($color-gray-dark-1, 0.2);
+
+  display: grid;
+  grid-template-rows: 12rem minmax(100rem, auto);
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "head head"
+    "list recipe";
 }
