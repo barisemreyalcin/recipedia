@@ -1,0 +1,19 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.75em 2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: inherit;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  svg {
+    fill: currentColor;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
