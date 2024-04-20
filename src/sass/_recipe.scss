@@ -1,0 +1,172 @@
+.recipe {
+  background-color: $color-gray-light-1;
+
+  ////////////
+  // FIGURE //
+  ////////////
+  &__fig {
+    height: 35rem;
+    transform-origin: top;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: $gradient;
+      opacity: 0.5;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 20%) skewY(-6deg);
+    color: #fff;
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    width: 50%;
+    line-height: 1.85;
+    text-align: center;
+
+    span {
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      padding: 0.4em 0.8em;
+      background-image: $gradient;
+    }
+  }
+
+  /////////////
+  // DETAILS //
+  /////////////
+
+  &__details {
+    display: flex;
+    align-items: center;
+    padding: 6em;
+  }
+
+  &__info {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 3.5em;
+    }
+  }
+
+  &__info-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: $color-primary;
+    margin-right: 0.5em;
+  }
+
+  &__info-data {
+    margin-right: 0.3em;
+    font-weight: 700;
+  }
+
+  &__info-buttons {
+    display: flex;
+    gap: 0.25em;
+    margin-left: 1em;
+    transform: translateY(-1px);
+  }
+
+  &__user-generated {
+    background-color: darken($color-gray-light-2, 8%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.2rem;
+    width: 4.2rem;
+    border-radius: 50%;
+
+    margin-left: auto;
+    margin-right: 1.5em;
+
+    svg {
+      height: 2.5rem;
+      width: 2.5rem;
+      fill: $color-primary;
+    }
+  }
+
+  /////////////////
+  // INGREDIENTS //
+  /////////////////
+  &__ingredients {
+    padding: 4em;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    background-color: $color-gray-light-2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__ingredient-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    list-style: none;
+  }
+
+  &__ingredient {
+    display: flex;
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-primary;
+    margin-right: 0.75em;
+    flex: 0 0 auto;
+    margin-top: 0.1em;
+  }
+
+  &__quantity {
+    margin-right: 0.5rem;
+    flex: 0 0 auto;
+  }
+
+  ////////////////
+  // DIRECTIONS //
+  ////////////////
+  &__directions {
+    padding: 6em;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__directions-text {
+    font-size: 1.7rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    color: $color-gray-dark-2;
+  }
+
+  &__publisher {
+    font-weight: 700;
+  }
+}
