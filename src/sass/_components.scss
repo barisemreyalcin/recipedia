@@ -132,7 +132,8 @@
   color: $color-gray-dark-2;
 }
 
-.message {
+.message,
+.error {
   max-width: 70rem;
   margin: 0 auto;
   padding: 5em 3em;
