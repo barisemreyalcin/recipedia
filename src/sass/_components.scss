@@ -3,7 +3,7 @@
   font-weight: 700;
   color: $color-primary;
   text-transform: uppercase;
-  margin-bottom: 1.75em;
+  margin-bottom: 1.25em;
   text-align: center;
 }
 
@@ -74,6 +74,40 @@
 
   &:active svg {
     transform: translateY(0);
+  }
+}
+
+.btn--inline {
+  color: $color-primary;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  background-color: $color-gray-light-1;
+  padding: 0.6em 1em;
+  border-radius: 10rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+
+  svg {
+    height: 1.6rem;
+    width: 1.6rem;
+    fill: currentColor;
+    margin: 0 0.15em;
+  }
+
+  span {
+    margin: 0 0.3em;
+  }
+
+  &:hover {
+    background-color: $color-gray-light-2;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 

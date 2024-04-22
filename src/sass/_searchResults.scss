@@ -10,13 +10,36 @@
 }
 
 .pagination {
-  margin-top: auto;
+  margin-top: 1.25em;
   padding: 0 3em;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &__btn {
+    &--prev {
+      float: left;
+    }
+    &--next {
+      float: right;
+    }
+  }
 }
 
 .copyright {
+  margin-top: auto;
   color: $color-gray-dark-2;
   font-size: 1.2rem;
   padding: 0 1.75em;
-  margin-top: 2em;
+  margin-bottom: 0.5em;
+  // margin-top: 2em;
+  text-align: center;
+
+  img {
+    margin-bottom: 1em;
+    height: 7rem;
+  }
 }
