@@ -64,6 +64,10 @@
     list-style: none;
   }
 
+  &__item {
+    position: relative;
+  }
+
   &__btn {
     display: flex;
     align-items: center;
@@ -94,5 +98,29 @@
     &:hover {
       background: $color-gray-light-2;
     }
+  }
+}
+
+.bookmarks {
+  padding: 1rem 0;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  width: 40rem;
+  background-color: #fff;
+  box-shadow: 0 0.8rem 5rem 2rem rgba($color-gray-dark-1, 0.1);
+
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s 0.2s;
+
+  &__list {
+    list-style: none;
+  }
+
+  &:hover,
+  .nav__btn--bookmarks:hover + & {
+    visibility: visible;
+    opacity: 1;
   }
 }
