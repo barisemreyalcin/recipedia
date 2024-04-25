@@ -10,6 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="shortcut icon"
+      href="src/img/recipedia-logo.png"
+      type="image/x-icon"
+    />
+
     <link rel="stylesheet" href="src/sass/main.scss" />
 
     <script type="module" src="src/js/controller.js"></script>
@@ -126,24 +133,53 @@
         <div class="upload__column">
           <h3 class="upload__heading">Recipe data</h3>
           <label>Title</label>
-          <input value="TEST VALUE" required name="title" type="text" />
+          <input
+            required
+            name="title"
+            type="text"
+            placeholder="Title of your recipe"
+          />
           <label>URL</label>
-          <input value="TEST VALUE" required name="sourceUrl" type="text" />
+          <input
+            required
+            name="sourceUrl"
+            type="text"
+            placeholder="URL of your recipe"
+          />
           <label>Image URL</label>
-          <input value="TEST VALUE" required name="image" type="text" />
+          <input
+            required
+            name="image"
+            type="text"
+            placeholder="URL of your recipe image"
+          />
           <label>Publisher</label>
-          <input value="TEST VALUE" required name="publisher" type="text" />
+          <input
+            required
+            name="publisher"
+            type="text"
+            placeholder="Publisher of your recipe"
+          />
           <label>Prep time</label>
-          <input value="24" required name="cookingTime" type="number" />
+          <input
+            required
+            name="cookingTime"
+            type="number"
+            placeholder="Duration in mins"
+          />
           <label>Servings</label>
-          <input value="2" required name="servings" type="number" />
+          <input
+            required
+            name="servings"
+            type="number"
+            placeholder="Number of servings"
+          />
         </div>
 
         <div class="upload__column">
           <h3 class="upload__heading">Ingredients</h3>
           <label>Ingredient 1</label>
           <input
-            value="0.5,kg,Rice"
             type="text"
             required
             name="ingredient-1"
@@ -151,14 +187,12 @@
           />
           <label>Ingredient 2</label>
           <input
-            value="1,,Avocado"
             type="text"
             name="ingredient-2"
             placeholder="Format: 'Quantity,Unit,Description'"
           />
           <label>Ingredient 3</label>
           <input
-            value=",,salt"
             type="text"
             name="ingredient-3"
             placeholder="Format: 'Quantity,Unit,Description'"
