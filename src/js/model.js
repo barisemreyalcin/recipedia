@@ -36,8 +36,6 @@ export const loadRecipe = async function (id) {
     if (state.bookmarks.some(bookmark => bookmark.id === id))
       state.recipe.bookmarked = true;
     else state.recipe.bookmarked = false;
-
-    console.log(state.recipe);
   } catch (err) {
     throw err;
   }
@@ -131,7 +129,6 @@ export const uploadRecipe = async function (newRecipe) {
 
     const recipe = {
       cooking_time: +newRecipe.cookingTime,
-      id: newRecipe.id,
       image_url: newRecipe.image,
       ingredients,
       publisher: newRecipe.publisher,

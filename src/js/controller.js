@@ -46,7 +46,6 @@ const controlSearchResults = async function () {
 
     // Load search results
     await model.loadSearchResults(query);
-    console.log(model.state.search.results);
 
     // Render search results
     resultsView.render(model.getSearchResultsPage());
@@ -111,7 +110,9 @@ const controlAddRecipe = async function (newRecipe) {
     window.history.pushState(null, "", `#${model.state.recipe.id}`);
 
     // Close the new recipe form popup
-    setTimeout(() => addRecipeView.toggleWindow(), MODAL_CLOSE_SEC * 1000);
+    setTimeout(function () {
+      addRecipeView.toggleWindow();
+    }, MODAL_CLOSE_SEC * 1000);
   } catch (err) {
     console.error(err);
     addRecipeView.renderError(err.message);
