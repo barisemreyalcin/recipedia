@@ -10,6 +10,11 @@ $color-gray-dark-2: #968484;
 
 $gradient: linear-gradient(to right bottom, $color-secondary, $color-primary);
 
+$breakpoint-lg: 78.15em; // 1250px
+$breakpoint-md: 60em; // 960px
+$breakpoint-sm: 48.75em; // 780px
+$breakpoint-xsm: 31.25em; // 500px
+
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +29,10 @@ $gradient: linear-gradient(to right bottom, $color-secondary, $color-primary);
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen and (max-width: $breakpoint-md) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -50,4 +59,16 @@ body {
   grid-template-areas:
     "head head"
     "list recipe";
+
+  @media only screen and (max-width: $breakpoint-lg) {
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  @media only screen and (max-width: $breakpoint-sm) {
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: auto minmax(100rem, auto);
+    position: relative;
+  }
 }

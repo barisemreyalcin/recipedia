@@ -12,6 +12,14 @@
   z-index: 1000;
   transition: all 0.5s;
 
+  @media only screen and (max-width: $breakpoint-sm) {
+    max-width: 100%;
+  }
+
+  @media only screen and (max-width: $breakpoint-sm) {
+    padding: 3em;
+  }
+
   .btn--close-modal {
     font-family: inherit;
     color: inherit;
@@ -47,11 +55,19 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem 6rem;
 
+  @media only screen and (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+
   &__column {
     display: grid;
     grid-template-columns: 1fr 2.8fr;
     align-items: center;
     gap: 1.25em;
+
+    @media only screen and (max-width: $breakpoint-sm) {
+      gap: 1em;
+    }
 
     & label {
       font-size: 1.5rem;

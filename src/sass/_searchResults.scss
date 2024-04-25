@@ -2,6 +2,50 @@
   padding: 2em 0;
   display: flex;
   flex-direction: column;
+  grid-area: list;
+  transition: all 0.3s;
+
+  @media only screen and (max-width: $breakpoint-xsm) {
+    background-color: #fff;
+    position: relative;
+    z-index: -1;
+  }
+
+  @media only screen and (max-width: $breakpoint-xsm) {
+    position: relative;
+    z-index: -1;
+    height: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  &--show {
+    position: relative;
+    z-index: 10;
+    height: auto;
+    opacity: 1;
+    transform: translateX(0);
+    grid-column: 1 /3;
+    width: 100%;
+  }
+
+  .btn--close-sidebar {
+    display: none;
+
+    @media only screen and (max-width: $breakpoint-xsm) {
+      display: block;
+      position: absolute;
+      z-index: 10;
+      top: 1rem;
+      right: 1rem;
+      border: 1px solid $color-primary;
+      color: $color-primary;
+      background-color: #fff;
+      font-size: 2rem;
+      font-weight: 500;
+      padding: 0.2em 0.4em;
+    }
+  }
 }
 
 .results {
@@ -15,6 +59,13 @@
   padding: 0 3em;
   position: relative;
 
+  @media only screen and (max-width: $breakpoint-sm) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+
   &-info {
     position: absolute;
     top: 50%;
@@ -26,6 +77,13 @@
     font-weight: 600;
     padding: 0.6em 1em;
     border-radius: 10rem;
+
+    @media only screen and (max-width: $breakpoint-sm) {
+      position: relative;
+      top: initial;
+      left: initial;
+      transform: initial;
+    }
   }
 
   &::after {
