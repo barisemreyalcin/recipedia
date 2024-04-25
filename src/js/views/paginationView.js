@@ -22,6 +22,7 @@ class PaginationView extends View {
     // Page 1 & other pages
     if (curPage === 1 && numPages > 1) {
       return `
+        ${this._generatePaginationInfo(curPage, numPages)}
         ${this._generateMarkupBtnNext(curPage + 1)}
       `;
     }
@@ -30,6 +31,7 @@ class PaginationView extends View {
     if (curPage === numPages && numPages > 1) {
       return `
         ${this._generateMarkupBtnPrev(curPage - 1)}
+        ${this._generatePaginationInfo(curPage, numPages)}
       `;
     }
 
@@ -37,11 +39,14 @@ class PaginationView extends View {
     if (curPage < numPages)
       return `
         ${this._generateMarkupBtnPrev(curPage - 1)}
+        ${this._generatePaginationInfo(curPage, numPages)}
         ${this._generateMarkupBtnNext(curPage + 1)}
       `;
 
     // Page 1 & no other pages
-    return "";
+    return `
+      ${this._generatePageInfo(curPage, numPages)}
+    `;
   }
 
   _generateMarkupBtnPrev(prevPage) {
@@ -64,6 +69,10 @@ class PaginationView extends View {
         </svg>
       </button>
     `;
+  }
+
+  _generatePaginationInfo(curPage, numPages) {
+    return `<p class="pagination-info">${curPage} / ${numPages}</p>`;
   }
 }
 
