@@ -36,17 +36,22 @@ class PaginationView extends View {
     }
 
     // Other page
-    if (curPage < numPages)
+    if (curPage < numPages) {
       return `
-        ${this._generateMarkupBtnPrev(curPage - 1)}
-        ${this._generatePaginationInfo(curPage, numPages)}
-        ${this._generateMarkupBtnNext(curPage + 1)}
+      ${this._generateMarkupBtnPrev(curPage - 1)}
+      ${this._generatePaginationInfo(curPage, numPages)}
+      ${this._generateMarkupBtnNext(curPage + 1)}
       `;
+    }
 
     // Page 1 & no other pages
-    return `
-      ${this._generatePageInfo(curPage, numPages)}
-    `;
+    if (curPage === numPages && numPages === 1) {
+      return `
+        ${this._generatePaginationInfo(curPage, numPages)}
+      `;
+    }
+
+    return "";
   }
 
   _generateMarkupBtnPrev(prevPage) {
